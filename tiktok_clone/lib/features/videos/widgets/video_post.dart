@@ -52,6 +52,8 @@ class _VideoPostState extends State<VideoPost>
   }
 
   void _onVisibilityChanged(VisibilityInfo info) {
+    if (!mounted) return;
+
     final VisibilityInfo(:visibleFraction) = info;
     final VideoPlayerController(:play, value: VideoPlayerValue(:isPlaying)) =
         _videoPlayerController;
