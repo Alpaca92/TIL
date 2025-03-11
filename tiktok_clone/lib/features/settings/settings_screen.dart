@@ -1,7 +1,22 @@
 import 'package:flutter/material.dart';
 
-class SettingsScreen extends StatelessWidget {
+class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
+
+  @override
+  State<SettingsScreen> createState() => _SettingsScreenState();
+}
+
+class _SettingsScreenState extends State<SettingsScreen> {
+  bool notification = false;
+
+  void _onNotificationChanged(bool? value) {
+    if (value == null) return;
+
+    setState(() {
+      notification = value;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -9,6 +24,17 @@ class SettingsScreen extends StatelessWidget {
       appBar: AppBar(title: const Text('Settings')),
       body: ListView(
         children: [
+          SwitchListTile(
+            value: notification,
+            onChanged: _onNotificationChanged,
+            title: const Text('Enable notification'),
+          ),
+          CheckboxListTile(
+            value: notification,
+            onChanged: _onNotificationChanged,
+            activeColor: Colors.black,
+            title: const Text('Enable notification'),
+          ),
           ListTile(
             onTap:
                 () => showDatePicker(
