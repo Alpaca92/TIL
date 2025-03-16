@@ -7,6 +7,7 @@ import 'package:tiktok_clone/features/navigation/widgets/nav_tab.dart';
 import 'package:tiktok_clone/features/navigation/widgets/post_video_button.dart';
 import 'package:tiktok_clone/features/users/user_profile_scree.dart';
 import 'package:tiktok_clone/features/videos/video_timeline_screen.dart';
+import 'package:tiktok_clone/utils.dart';
 
 class MainNavigationScreen extends StatefulWidget {
   const MainNavigationScreen({super.key});
@@ -54,7 +55,10 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
         ],
       ),
       bottomNavigationBar: BottomAppBar(
-        color: _selectedIndex == 0 ? Colors.black : Colors.white,
+        color:
+            _selectedIndex == 0 || isDarkMode(context)
+                ? Colors.black
+                : Colors.white,
         child: Row(
           children: [
             NavTab(
