@@ -41,7 +41,6 @@ class _VideoCommentsState extends State<VideoComments> {
         borderRadius: BorderRadius.circular(Sizes.size14),
       ),
       child: Scaffold(
-        backgroundColor: Colors.grey.shade50,
         appBar: AppBar(
           title: const Text('33,333 Comments'),
           automaticallyImplyLeading: false,
@@ -113,7 +112,6 @@ class _VideoCommentsState extends State<VideoComments> {
                 width: size.width,
                 bottom: 0,
                 child: BottomAppBar(
-                  color: Colors.white,
                   child: Row(
                     children: [
                       CircleAvatar(
