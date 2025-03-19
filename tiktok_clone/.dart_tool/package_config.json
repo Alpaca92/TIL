@@ -74,6 +74,12 @@
       "languageVersion": "3.5"
     },
     {
+      "name": "flutter_localizations",
+      "rootUri": "file:///Users/changsungyim/fvm/versions/3.29.0/packages/flutter_localizations",
+      "packageUri": "lib/",
+      "languageVersion": "3.7"
+    },
+    {
       "name": "flutter_test",
       "rootUri": "file:///Users/changsungyim/fvm/versions/3.29.0/packages/flutter_test",
       "packageUri": "lib/",
@@ -114,6 +120,12 @@
       "rootUri": "file:///Users/changsungyim/.pub-cache/hosted/pub.dev/http_parser-4.1.2",
       "packageUri": "lib/",
       "languageVersion": "3.4"
+    },
+    {
+      "name": "intl",
+      "rootUri": "file:///Users/changsungyim/.pub-cache/hosted/pub.dev/intl-0.19.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
     },
     {
       "name": "leak_tracker",
@@ -326,7 +338,7 @@
       "languageVersion": "3.7"
     }
   ],
-  "generated": "2025-03-15T23:26:02.854445Z",
+  "generated": "2025-03-19T13:58:00.716390Z",
   "generator": "pub",
   "generatorVersion": "3.7.0",
   "flutterRoot": "file:///Users/changsungyim/fvm/versions/3.29.0",
