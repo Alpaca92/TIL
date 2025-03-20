@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/intl_generated.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
-import 'package:tiktok_clone/features/settings/settings_screen.dart';
+import 'package:tiktok_clone/features/authentication/sign_up_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,13 +18,8 @@ class TikTokApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      localizationsDelegates: [
-        AppLocalizations.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-      ],
-      supportedLocales: [const Locale('en'), const Locale('ko')],
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
       themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -71,8 +65,7 @@ class TikTokApp extends StatelessWidget {
         primaryColor: const Color(0xFFE9435A),
         tabBarTheme: const TabBarTheme(indicatorColor: Colors.white),
       ),
-      home: const SettingsScreen(),
-      // home: const SignUpScreen(),
+      home: const SignUpScreen(),
     );
   }
 }
